@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Country from './Components/Country/Country';
+import Cart from './Components/Cart/Cart';
 
 function App() {
  const [countries,setCountries]= useState([])
@@ -24,6 +25,7 @@ function App() {
     <div>
         <h1>Country Loaded:{countries.length}</h1>
         <h2>Country added: {countCountry.length}</h2>
+        <Cart countCountry={countCountry}></Cart>
         <div>
           <ul>
             {
